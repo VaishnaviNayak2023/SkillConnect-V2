@@ -1,0 +1,165 @@
+/* === Course Detail Page Styling === */
+
+/* General Page */
+body {
+  font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f9fafb;
+  color: #333;
+}
+
+/* Navbar Consistency */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 0.75rem;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+/* Course Header */
+.course-header {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.course-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.course-header .provider {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.course-description h2 {
+  font-weight: 500;
+}
+
+.course-meta {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+.course-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Section Base */
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #007bff;
+  padding-left: 0.6rem;
+  color: #007bff;
+}
+
+/* Skills */
+
+.course-skills h2 {
+    font-weight: 500;
+}
+
+.course-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-skills li {
+  padding: 0.4rem 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.course-skills li i {
+  color: #007bff;
+}
+
+/* Curriculum */
+.course-curriculum h2 {
+    font-weight: 500;
+}
+
+.course-curriculum ol {
+  padding-left: 1.2rem;
+}
+
+.course-curriculum li {
+  margin: 0.5rem 0;
+}
+
+/* Enrollment */
+.enrollment {
+  text-align: center;
+}
+
+.enrollment h2 {
+    font-weight: 500;
+}
+
+.enrollment .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #007bff;
+}
+
+.enroll-button {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.enroll-button:hover {
+  background: #0056b3;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: #111827;
+  color: #f3f4f6;
+  font-size: 0.9rem;
+}

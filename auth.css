@@ -1,0 +1,202 @@
+/* ==== PAGE LAYOUT ==== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px; /* spacing top & bottom */
+  box-sizing: border-box;
+}
+
+/* ==== FORM CONTAINER (with perspective) ==== */
+.form-container {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+}
+
+/* ==== INNER WRAPPER (rotates for flipping) ==== */
+.form-inner {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.form-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* ==== CARDS ==== */
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 600px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* ==== HEADINGS ==== */
+.card-front h1,
+.card-back h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.intro {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* ==== FORM ==== */
+.form .form-group {
+  margin-bottom: 20px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-input-container input {
+  padding-right: 3rem;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #7f8c8d;
+}
+
+/* ==== BUTTONS ==== */
+.primary-button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.social-button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.social-button:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+/* ==== DIVIDER ==== */
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.or-divider::before {
+  margin-right: .5em;
+}
+
+.or-divider::after {
+  margin-left: .5em;
+}
+
+/* ==== SWITCH TEXT ==== */
+.switch-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+.switch-text a {
+  color: #3498db;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 600px) {
+  .card-front,
+  .card-back {
+    padding: 20px;
+  }
+}
